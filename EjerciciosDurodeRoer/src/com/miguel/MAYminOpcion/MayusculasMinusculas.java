@@ -15,14 +15,25 @@ public class MayusculasMinusculas {
     
     public static void main(String[] args) {
         
-        JOptionPane.showInputDialog(null, "Por favor, introduce tu frase", "Introducción", JOptionPane.INFORMATION_MESSAGE);
+        String texto=JOptionPane.showInputDialog(null, "Por favor, introduce una frase", "Introducción", JOptionPane.INFORMATION_MESSAGE);
         
-        //true = Upper, false =Lower
-        boolean IsUpper;
+        String cadenaResultante="";
         
-        int eleccion=JOptionPane.showConfirmDialog(null, "¿Quieres que se pase a mayusculas?", "Resultado", 0);
+       // true =isUpper flase =isLower
+        boolean isUpper = false;
+        
+        int eleccion=JOptionPane.showConfirmDialog(null, "¿Quieres que se pase a mayusculas?", "Elección", JOptionPane.YES_NO_OPTION);
+
+        isUpper=eleccion==JOptionPane.YES_OPTION;
         
         
-    }
-    
+        if (isUpper) {
+            cadenaResultante=texto.toUpperCase();
+        } else {
+            
+            cadenaResultante=texto.toLowerCase();
+        }
+        
+        JOptionPane.showMessageDialog(null, cadenaResultante, "Resultado", JOptionPane.INFORMATION_MESSAGE);
+    } 
 }
