@@ -20,7 +20,7 @@ public class MayusculasMinusculas {
         //true = Upper, false =Lower
         boolean IsUpper;
         
-        int eleccion=JOptionPane.showConfirmDialog(null, "¿Quieres que se pase a mayusculas?", title, 0)
+        int eleccion=JOptionPane.showConfirmDialog(null, "¿Quieres que se pase a mayusculas?", "Resultado", 0);
         
         
     }
